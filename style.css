@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section{
+	
+	display: block;
+	
+}
+
+html, body, h1, h2, h3, ul, li, a, p,
+article, aside, footer, header, main, nav, section{
+	
+	padding: 0;
+	margin: 0;
+	
+}
+
+#header{
+	
+	display: block;
+	padding: 10px 20px;
+	float: left;
+	width: 100%;
+	text-align: left;
+	text-decoration: navbar;
+	background-color: blue;
+	color: yellow;
+	font-size: 18;
+	font-style: bold;
+	font-family: georgia;
+	
+}
+
+#navbar ul{
+	
+	list-style: none;
+	clear: both;
+	
+}
+
+#navbar> li{
+	
+	display: inline;
+	height: 40px;
+	width: 120px;
+	padding: 10px;
+	text-decoration: navbar;
+	background-color: blue;
+	color: yellow;
+	font-size: 18;
+	font-style: bold;
+	font-family: georgia;
+	cursor: pointer;
+	
+} 
+
+
+

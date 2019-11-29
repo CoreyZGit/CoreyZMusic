@@ -1,0 +1,95 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Corey Z Music</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+	
+		<header id="header">
+			<h1 style="list-style: none;">COREY Z MUSIC
+			<p id ="guitar_icon" style="float: right; padding: 10px; margin: 10px; cursor: pointer;">
+			<img src="guitar_icon.png" width="125" height="50" onclick="playAudio()">
+				<audio id="audio" src="Tesla2.wav"><audio/>		
+			</p>	
+			</h1>
+				<script>
+					function playAudio(){
+					var audio = document.getElementById("audio");
+					audio.play();
+	
+					}	
+	</script>	
+		</header>
+		
+		<nav>
+			<ul id="navbar">
+				<li id="1">About Me</li>
+				<li id="2">Music</li>
+				<li id="3">Contact</li>
+				<li id="4">Blog</li>
+				<script>
+				
+					var li = document.getElementsByTagName("li");
+
+					for(var i = 0; i < li.length; i++){
+						li[i].addEventListener("mouseover", changeRed);
+						li[i].addEventListener("mouseout", changeYellow);
+						li[i].addEventListener("mouseclick", navigateTo);
+					}
+
+					function changeRed(e){
+						event.target.style.color = "red";       
+					}
+				
+					function changeYellow(e){
+						event.target.style.color = "yellow";
+					}
+					
+					function navigateTo(e){
+					
+					
+					
+					}
+					
+					
+				
+				</script>
+			</ul>
+		</nav>
+		
+	<main>	
+	
+		<section>
+			<article>
+				<header>
+					<h3></h3>
+				</header>
+			</article>
+		
+			<article>
+				<header>
+					<h3></h3>
+				</header>
+			</article>
+		
+			<article>
+				<header>
+					<h3></h3>
+				</header>
+			</article>
+		<section>	
+	</main>	
+	
+	<aside>
+	</aside>
+
+	<footer>
+	</footer>
+	
+	
+	</section>
+	</main>			
+	</body>
+</html>
