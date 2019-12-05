@@ -6,13 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
 	<body>
-	
 		<header id="header">
 			<h1 style="list-style: none;">COREY Z MUSIC
-			<p id ="guitar_icon" style="float: right; padding: 10px; margin: 10px; cursor: pointer;">
-			<img src="guitar_icon.png" width="125" height="50" onclick="playAudio()">
-				<audio id="audio" src="Tesla2.wav"><audio/>		
-			</p>	
+			 <p id ="guitar_icon" style="float: right; padding: 10px; margin: 10px; cursor: pointer;">
+			     <img src="guitar_icon.jpg" width="125" height="50" onclick="playAudio()">
+				 <audio id="audio" src=""><audio/>		
+                 </audio></p>
 			</h1>
 				<script>
 					function playAudio(){
@@ -28,7 +27,7 @@
 				<li id="1">About Me</li>
 				<li id="2">Music</li>
 				<li id="3">Contact</li>
-				<li id="4">Blog</li>
+				<li id="4">Shows</li>
 				<script>
 				
 					var li = document.getElementsByTagName("li");
@@ -36,7 +35,7 @@
 					for(var i = 0; i < li.length; i++){
 						li[i].addEventListener("mouseover", changeRed);
 						li[i].addEventListener("mouseout", changeYellow);
-						li[i].addEventListener("mouseclick", navigateTo);
+						li[i].addEventListener("click", navigateTo);
 					}
 
 					function changeRed(e){
@@ -49,7 +48,29 @@
 					
 					function navigateTo(e){
 					
-					
+					  if(event.target.id == "1"){
+                          
+                          var targetElement = document.getElementById("aboutme");
+                          targetElement.scrollIntoView(true);
+                          
+                      }else if(event.target.id == "2"){
+                          
+                          var targetElement = document.getElementById("music");
+                          targetElement.scrollIntoView(true);
+                          
+                      }else if(event.target.id == "3"){
+                          
+                          var targetElement = document.getElementById("contact");
+                          targetElement.scrollIntoView(true);
+                          
+                      }else if(event.target.id == "4"){
+                          
+                          var targetElement = document.getElementById("shows");
+                          targetElement.scrollIntoView(true);
+                          
+                          
+                          
+                      }
 					
 					}
 					
@@ -58,38 +79,84 @@
 				</script>
 			</ul>
 		</nav>
-		
-	<main>	
+	<main style="float: left">	
 	
 		<section>
-			<article>
+			<article class="articleclass" id="aboutme">
+                <h3 class="sectionheaderstyle">About Me</h3>                                             
+                <img id= "meguitar" src="Me_guitar.jpg" title="Corey Zwart" width= "290" height ="290">
+                <p>My name is Corey Zwart.  I have been playing guitar for rughly nine years and have been a consistently giggin musician for the last 5.  I love music n stuff.  This bio sucks but I am using it as a test in order to learn some web developement</p> 
+            </article>
+			<article class="articleclass" id="music">
+				<h3 class="sectionheaderstyle">Music</h3>
+                <h4 style="text-decoration: underline; color: red; margin-left: 20px">Links To Current Musical Acts</h4>
+                <h4></h4>
+                <ul style="list-style: none; margin-left: 20px">
+                    <li>
+                        <a href="https://bradleycopperkettleandfriends.com/home" target="_blank">Bradley Copper Kettle and Friends</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/abczmuzic/" target="_blank">AB/CZ</a>
+                    </li>    
+                    <li>
+                        <a href="https://www.facebook.com/DaemonChili/" target="_blank">Daemon Chili</a>
+                    </li>
+                </ul>
+                <div style="height: 200; width: 250; padding: 20px; padding-top: 30px">
+                <p>Above current musical acts that I play with on a consistent basis are listed.  To the left all my gigs are shown. They also include sol gigs that I have coming up.  The venue names link to the appropriate site.</p>
+                </div>
+			</article>
+			<article class="articleclass" id="contact">
 				<header>
-					<h3></h3>
+					<h3 class ="sectionheaderstyle">Contact Info</h3>
+                    <h4>Provided below is my contact info. Feel free to shoot me an email or fill out the required fields below.</h4>
+                    <ul style="list-style">
+                        <li>Corey Zwart</li>
+                        <li>13 Samuel Rd</li>
+                        <li>Chelmsford, MA 01824</li>
+                        <li>Email: zwartcorey@gmail.com</li>
+                        <li>Phone: 978-987-1456</li>
+                        <li><a href="https://www.facebook.com/corey.zwart.3"> Facebook: CoreyZMusic</a></li>
+                    
+                    
+                    </ul>
 				</header>
 			</article>
-		
-			<article>
+            <article class="articleclass" id="shows">
 				<header>
-					<h3></h3>
+					<h3 class ="sectionheaderstyle">Upcoming Shows</h3>
 				</header>
 			</article>
-		
-			<article>
-				<header>
-					<h3></h3>
-				</header>
-			</article>
-		<section>	
+        </section>	
 	</main>	
 	
 	<aside>
+        <h3 style="margin: 10px">April Come She Will</h3>
+        <video controls style="margin: 10px; height: 300 px; width: 300px;">
+        <source src="https://www.youtube.com/watch?v=XpAk31_KJcE", type="video/mp4">
+        </video>
+        <div id="calendar"></div>
 	</aside>
 
 	<footer>
 	</footer>
-	
-	
-	</section>
-	</main>			
+        
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        
+        <script>
+                          
+            $("#calendar").datepicker({
+            inline: true,
+            firstDay: 1,
+            showOtherMonths: true,
+            dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+                         
+        });   
+        
+        </script>    
+        
+        
+		
 	</body>
 </html>
